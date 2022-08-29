@@ -3,10 +3,21 @@ public class InvocableFlowDeleteOpportunity {
                      description='Delete Related Opportunities for the given record ID' 
                      category='Account')
     public static void deleteOpportunities(List<String> ids){
-        List<Opportunity> oppList = [SELECT Id 
+        List<String> listOppIds = new List<String>();
+        //ids = {'0001EfRRvR004'}
+        //Id accountId = ids.get(0);
+        List<Opportunity> oppLists = [SELECT Id 
                                      FROM Opportunity 
                                      WHERE AccountId =: ids 
                                      AND StageName = 'Closed Won'];
-        delete oppList;
+        
+        for(Opportunity opp:oppLists){
+            listOppIds.add(opp.id);
+        }
+        System.debug('Opportunities List' + oppLists);
+        
+        if (listOppIds.contains('0068d000008wos9AAA')){
+            System.debug('The Opportunity is in the list = True');
+        }
     }
 }
