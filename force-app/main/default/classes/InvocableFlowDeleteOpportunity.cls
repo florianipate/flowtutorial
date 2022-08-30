@@ -6,13 +6,13 @@ public class InvocableFlowDeleteOpportunity {
         List<String> listOppIds = new List<String>();
         //ids = {'0001EfRRvR004'}
         //Id accountId = ids.get(0);
-        List<Opportunity> oppLists = [SELECT Id 
+        List<Opportunity> oppLists = [SELECT Id, name 
                                      FROM Opportunity 
                                      WHERE AccountId =: ids 
                                      AND StageName = 'Closed Won'];
         
         for(Opportunity opp:oppLists){
-            listOppIds.add(opp.id);
+            listOppIds.add(opp.name);
         }
         System.debug('Opportunities List' + oppLists);
         
