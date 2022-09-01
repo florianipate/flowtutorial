@@ -7,6 +7,7 @@ public class FlowBuilderInvocableCase {
         String contactId = requestList.get(0).contactId;
         String caseNumber = requestList.get(0).caseNumber;
 
+        
         Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
         message.toAddresses = new String[]{contactId}; //new String[] {'95i5jrtmfmfHGGV', '1000GdmGFGRRGFGF'}; //email Addtess
         message.subject = 'Casse new Message' + caseNumber;
