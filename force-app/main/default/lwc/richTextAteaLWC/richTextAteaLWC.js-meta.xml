@@ -7,4 +7,12 @@
     <targets>
         <target>lightning__FlowScreen</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets = "lightning__FlowScreen">
+            <property name = "placeholder" type="String" label="Enter The Placeholder" />
+            <property name = "value" type="String" label="This will be used to accept the values from the flow and vice versa" />
+            <property name = "label" type="String" label="Ente the Rich Text Label" />
+            <property name = "required" type="Boolean" default= "true" label="Select if required" />
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
