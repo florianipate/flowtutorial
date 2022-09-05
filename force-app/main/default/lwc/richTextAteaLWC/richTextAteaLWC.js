@@ -18,7 +18,7 @@ export default class RichTextAteaLWC extends LightningElement {
 
     handleChange = (event) =>{
         event.preventDefault();
-        event.value = event.target.value;
+        this.value = event.target.value;
 
     }
 
