@@ -9,7 +9,7 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
-        <members>InvocableFlowDeleteOpportunity</members>
+        <members>demoString</members>
         <name>ApexClass</name>
     </types>
     
