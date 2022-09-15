@@ -15,6 +15,8 @@ export default class SendToLWC_v3 extends LightningElement {
       //handle the message
     //   if (message.data.name === "SampleVFToLWCMessage") {
         this.messageFromVF = JSON.parse(JSON.stringify(message.data));
+
+        
     //   }
     });
   }
